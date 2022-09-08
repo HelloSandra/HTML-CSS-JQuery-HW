@@ -1,0 +1,310 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.wrap{
+    margin: 0 auto;
+    width: 960px;
+  }
+  /***bar***/
+  .bar{
+    display: flex;
+    justify-content: end;
+    background-color: #f6f6f6;
+    padding: 5px 10px;
+  }
+  .FB{
+    padding-right: 10px;
+    border-right: 2px solid #cccccc;
+  }
+  .bar img{
+    margin-left: 10px;
+  }
+  .bar a{
+    text-decoration: none;
+    font-weight: bolder;
+  }
+  .bar a:hover{
+    color: red;
+  }
+  
+  /***header***/
+  .header{
+    display: flex;
+    justify-content: space-between;
+  }
+  /**logo**/
+  .header h1 a{
+    display: block;
+    width: 198px;
+    height: 48px;
+    background-image: url(../img/logo.png);
+    text-indent: 100%;
+    overflow: hidden;
+  }
+  /**選單---第一層**/
+  .menu{
+    display: flex;
+    align-items: center;
+  }
+  .menu > li{
+    width: 110px;
+    position: relative;
+  }
+  .menu li a{
+    text-decoration: none;
+    padding: 10px 5px;
+    font-weight: bolder;
+    color: #00cc99;
+  }
+  .menu > li > a:hover{
+    border-bottom: 4px solid #00cc99;
+    padding-bottom: 8px;
+  }
+  .menu > li > a.active{
+    border-bottom: none;
+  }
+  /**選單---第二層**/
+  .menu_dropdown{
+    display: none;
+    position: absolute;
+    z-index: 999;
+  }
+  .menu .menu_dropdown a{
+    border: 1px solid #00cc99;
+    background: #fff; 
+    color: black;
+    display: block; /*??*/
+  }
+  .menu .menu_dropdown a:hover{
+    background: #00cc99;
+    color: #fff;  
+  }
+  
+  /***banner***/
+  /*.banner{
+    /*background-image: url("../img/banner.png" );*/
+    /*height: 346px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 60px;
+  }*/
+
+  /**輪播**/
+  .swiper-container {
+    width: 100%;
+    height: 400px;
+  }
+  .swiper-slide{
+    position: relative;
+  }
+  .swiper-slide img{
+    width: 100%;
+    
+  }
+  .swiper-slide h2{
+      color: white;
+      font-size: 40px;
+      line-height: 55px;
+      background-color: rgba(0, 0, 0, 0.6); /*rgb:顏色;a:透明度*/
+      padding: 30px 24px;
+      position: absolute;
+      left: 0;
+      top: 20%;
+    }
+  
+  /***content***/
+  .content{
+    margin: 80px 0;
+  }
+  /**產品介紹**/
+  .product{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 80px;
+  }
+  .product_list{
+    width: 300px;
+    box-shadow: 1px 3px 10px gray;/*陰影：X Y 模糊 顏色*/
+    border-radius: 3px;/*四角形狀：左上 右上 右下 左下*/
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .product_list img{
+    display: block;  /*圖片水平置中*/
+    margin: 15px auto;  /*圖片水平置中*/
+    width: 150px; 
+    height: 150px;
+    object-fit: contain; /*先框出一個固定的區域(寬度高度)，讓圖片可以完整且剛好放進去。*/
+  }
+  .product_list h3{
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .product_list p{
+    margin: 10px 18px;
+    text-align: justify; /*左右對齊*/
+    line-height: 22px;
+  }
+  .product_list li{
+    margin-left: 36px;
+    margin-bottom: 8px;
+    list-style-type: disc;/*列點實心圓;可用border觀察*/
+  }
+  /**比較表格**/
+  .content h2{
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  table{
+    margin: 0 auto;
+  }
+  table th,td{
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    padding: 10px 60px;
+  }
+  table th{
+    background: #f6f6f6;
+    text-align: left; /*針對"項目"一欄*/
+    font-weight: bolder;
+  }
+  .highlight{
+    color:  #00cc99;
+  }
+  
+  /***information***/
+  .information{
+    background: linear-gradient(#00664C,#009772);/*預設上到下漸層*/ /*background: linear-gradient(left,#DD99BB,#EAD7D1);左到右漸層*/
+    padding-bottom: 30px;
+  }
+  .information h2{
+    color: white;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 20px;
+  }
+  /**個人資料**/
+  form{
+    display: flex;
+    justify-content: space-around;
+  }
+  /**個人資料_留言**/
+  textarea{
+    resize: none; /*固定大小*/
+    width: 45%;
+    border: none;
+    border-radius: 3px;
+  }
+  /**個人資料_姓名電話信箱**/
+  .personal_info{
+    display: flex;
+    flex-direction: column;
+  }
+  .personal_info p{
+    color: white;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .personal_info input{
+    width: 400px;
+    height: 28px;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+  .personal_info .btn{ /*CSS權重*/
+    width: 70px;
+    height: 30px;
+    color: white;
+    background: #00cc98;
+    border: none;
+    border-radius: 4px;
+    align-self: flex-end;
+    cursor: pointer;
+  }
+  .personal_info .btn:hover{
+    color: #000;
+    background: yellow;
+    font-weight: bold;
+  }
+  
+  /***footer***/
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .footer li{
+    margin-bottom: 10px; /*壓縮到圖片??但圖片加a又會恢復*/
+    font-weight: bold;
+  }
+  .footer span{
+    color: #E12F81;
+  }
+  .footer img{
+    width: 171px;
+    height: 36px;
+  }
+
+  /***回最上面箭頭***/
+  .top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+  }
+  .top img{
+    width: 80px;
+  }
