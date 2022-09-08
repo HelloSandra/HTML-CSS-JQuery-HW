@@ -127,15 +127,6 @@ table {
   }
   
   /***banner***/
-  /*.banner{
-    /*background-image: url("../img/banner.png" );*/
-    /*height: 346px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-bottom: 60px;
-  }*/
-
   /**輪播**/
   .swiper-container {
     width: 100%;
@@ -146,7 +137,7 @@ table {
   }
   .swiper-slide img{
     width: 100%;
-    
+    height: 100%;
   }
   .swiper-slide h2{
       color: white;
