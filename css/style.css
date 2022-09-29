@@ -97,6 +97,8 @@ table {
     position: relative;
   }
   .menu li a{
+    display: block;
+    text-align: center;
     text-decoration: none;
     padding: 10px 5px;
     font-weight: bolder;
@@ -114,12 +116,13 @@ table {
     display: none;
     position: absolute;
     z-index: 999;
+    top: 100%;
+    width: 100%;
   }
   .menu .menu_dropdown a{
     border: 1px solid #00cc99;
     background: #fff; 
     color: black;
-    display: block; /*??*/
   }
   .menu .menu_dropdown a:hover{
     background: #00cc99;
@@ -197,15 +200,16 @@ table {
     text-align: center;
     margin-bottom: 30px;
   }
-  table{
+  .compare{
     margin: 0 auto;
+    width: 100%;
   }
-  table th,td{
+  .compare th,td{
     border-bottom: 1px solid black;
     border-top: 1px solid black;
-    padding: 10px 60px;
+    padding: 10px;
   }
-  table th{
+  .compare th{
     background: #f6f6f6;
     text-align: left; /*針對"項目"一欄*/
     font-weight: bolder;
@@ -282,7 +286,8 @@ table {
     margin-bottom: 10px; /*壓縮到圖片??但圖片加a又會恢復*/
     font-weight: bold;
   }
-  .footer span{
+  .footer a{
+    text-decoration: none;
     color: #E12F81;
   }
   .footer img{
@@ -291,11 +296,10 @@ table {
   }
 
   /***回最上面箭頭***/
-  .top{
+  #top{
     position: fixed;
     bottom: 0;
     right: 0;
-  }
-  .top img{
-    width: 80px;
+    display: none;
+    font-size: 50px
   }

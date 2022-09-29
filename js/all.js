@@ -7,11 +7,14 @@ $(document).ready(function () {
     });
 
     //回最上面箭頭
-    $('.top a').click(function(event){
-        event.preventDefault;
-        //body會滾到卷軸0的位置，花3秒時間滾到
-        $('html,body').animate({scrollTop:0},1000);
-      });
+    function showBtnCondition() {
+      if ($(this).scrollTop() > 100) {
+        $('#top').fadeIn();
+          } else {
+           $('#top').fadeOut();           
+          }
+        }
+    $(window).scroll(showBtnCondition);
 
     //燈箱效果
     lightbox.option({
