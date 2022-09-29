@@ -301,5 +301,6 @@ table {
     bottom: 0;
     right: 0;
     display: none;
-    font-size: 50px
+    font-size: 50px;
+    cursor: pointer;
   }

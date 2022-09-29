@@ -14,6 +14,11 @@ $(document).ready(function () {
            $('#top').fadeOut();           
           }
         }
+        $('#top').click(function(event){
+          event.preventDefault;
+          //body會滾到卷軸0的位置，花3秒時間滾到
+          $('html,body').animate({scrollTop:0},1000);
+        });
     $(window).scroll(showBtnCondition);
 
     //燈箱效果
